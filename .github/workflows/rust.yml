@@ -9,7 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Version check
+      run: rust --version
     - name: Build
-      run: cargo run --verbose
+      run: cargo build --verbose
+    - name: Execute
+      run: ./hello_cargo
     - name: Run tests
       run: cargo test --verbose
