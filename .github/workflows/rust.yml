@@ -9,10 +9,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: install
+      run: sudo apt-get install tree
     - name: Version check
       run: rustc --version
     - name: Build
       run: cargo build --verbose
+    - name: tree
+      run: tree
     - name: Execute
       run: ./hello_cargo
     - name: Run tests
