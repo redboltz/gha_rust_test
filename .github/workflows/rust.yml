@@ -18,6 +18,6 @@ jobs:
     - name: tree
       run: tree
     - name: Execute
-      run: ./hello_cargo
+      run: target/debug/hello_cargo
     - name: Run tests
       run: cargo test --verbose
