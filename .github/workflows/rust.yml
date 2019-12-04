@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Version check
-      run: rust --version
+      run: rustc --version
     - name: Build
       run: cargo build --verbose
     - name: Execute
